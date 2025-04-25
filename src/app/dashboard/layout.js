@@ -32,7 +32,7 @@ export default function DashboardLayout({ children }) {
     return (
         <div className="min-h-screen flex flex-col md:flex-row">
             {/* Sidebar for larger screens */}
-            <aside className="w-64 bg-blue-600 text-white flex flex-col items-start p-6 space-y-4 md:block hidden">
+            <aside className="w-64 mt-16 h-400 bg-blue-600 text-white flex flex-col items-start p-6 space-y-4 md:block hidden">
                 {user && (
                     <div className="mt-4 text-sm">
                         <p className="font-semibold">Welcome,</p>
@@ -85,7 +85,7 @@ export default function DashboardLayout({ children }) {
             </aside>
 
             {/* Main Content Area */}
-            <main className="flex-1 p-8 bg-gray-100">
+            <main className="flex-1 p-8 bg-white">
                 {children}
             </main>
 
