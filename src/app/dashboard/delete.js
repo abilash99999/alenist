@@ -14,7 +14,7 @@ export default function DeleteModal({ setDeleteModal, handleConfirmDelete }) {
     };
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-transparent bc:\Users\Abilash\Downloads\world-wide-web.png c:\Users\Abilash\Downloads\settings.png c:\Users\Abilash\Downloads\backend.png c:\Users\Abilash\Downloads\home.png c:\Users\Abilash\Downloads\android (1).png c:\Users\Abilash\Downloads\apple.pngg-opacity-40 flex items-center justify-center z-50">
             <div className="bg-white rounded-xl p-6 max-w-md w-full shadow-lg text-center">
                 <h2 className="text-xl font-semibold mb-4">Are you sure?</h2>
                 <p className="text-gray-600 mb-6">This action cannot be undone.</p>

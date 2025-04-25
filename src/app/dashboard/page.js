@@ -48,7 +48,7 @@ export default function ToDoPage() {
     };
 
     return (
-        <div className="p-6">
+        <div className="">
             <h1 className="text-3xl font-bold mb-6">To-Do List</h1>
 
             {successMsg && <div className="mb-4 text-green-600 font-semibold">{successMsg}</div>}
@@ -61,8 +61,7 @@ export default function ToDoPage() {
                 + Create To-Do
             </button>
 
-
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto"> {/* Add horizontal scrolling */}
                 <table className="min-w-full bg-white border border-gray-300 rounded-md shadow-sm">
                     <thead className="bg-gray-100">
                         <tr>

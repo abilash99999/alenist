@@ -1,4 +1,3 @@
-// app/dashboard/layout.js
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -31,10 +30,9 @@ export default function DashboardLayout({ children }) {
     };
 
     return (
-        <div className="min-h-screen flex">
-            {/* Sidebar */}
-            <aside className="w-64 bg-blue-600 text-white flex flex-col items-start p-6 space-y-4">
-
+        <div className="min-h-screen flex flex-col md:flex-row">
+            {/* Sidebar for larger screens */}
+            <aside className="w-64 bg-blue-600 text-white flex flex-col items-start p-6 space-y-4 md:block hidden">
                 {user && (
                     <div className="mt-4 text-sm">
                         <p className="font-semibold">Welcome,</p>
@@ -90,6 +88,28 @@ export default function DashboardLayout({ children }) {
             <main className="flex-1 p-8 bg-gray-100">
                 {children}
             </main>
+
+            {/* Horizontal footer for smaller screens */}
+            <footer className="md:hidden fixed bottom-0 w-full bg-blue-600 text-white flex justify-around items-center py-2 space-x-6">
+                <Link href="/dashboard" className="flex justify-center items-center hover:bg-blue-700 rounded-full p-2">
+                    <img src="/home.png" alt="Home" className="w-6 h-6 invert" />
+                </Link>
+                <Link href="/dashboard/web" className="flex justify-center items-center hover:bg-blue-700 rounded-full p-2">
+                    <img src="/world-wide-web.png" alt="Home" className="w-6 h-6 invert" />
+                </Link>
+                <Link href="/dashboard/ios" className="flex justify-center items-center hover:bg-blue-700 rounded-full p-2">
+                    <img src="/apple.png" alt="iOS" className="w-6 h-6 invert" />
+                </Link>
+                <Link href="/dashboard/android" className="flex justify-center items-center hover:bg-blue-700 rounded-full p-2">
+                    <img src="/android.png" alt="Android" className="w-6 h-6 invert" />
+                </Link>
+                <Link href="/dashboard/backend" className="flex justify-center items-center hover:bg-blue-700 rounded-full p-2">
+                    <img src="/backend.png" alt="Backend" className="w-6 h-6 invert" />
+                </Link>
+                <Link href="/dashboard/settings" className="flex justify-center items-center hover:bg-blue-700 rounded-full p-2">
+                    <img src="/settings.png" alt="Settings" className="w-6 h-6 invert" />
+                </Link>
+            </footer>
         </div>
     );
-}
+} 

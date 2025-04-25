@@ -70,7 +70,7 @@ export default function CreateModal({ setShowModal, fetchTodos, setSuccessMsg, s
     };
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-transparent  bg-opacity-40 flex items-center justify-center z-50">
             <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg space-y-4">
                 <h2 className="text-xl font-semibold mb-2">Create New To-Do</h2>
 
@@ -123,8 +123,13 @@ export default function CreateModal({ setShowModal, fetchTodos, setSuccessMsg, s
                         className="w-full border px-3 py-2 rounded-md"
                     >
                         <option value="">Select type</option>
-                        <option value="FEATURE">FEATURE</option>
-                        <option value="BUG">BUG</option>
+                        <option value="LEGAL">LEGAL</option>
+                        <option value="TECHNICAL">TECHNICAL</option>
+                        <option value="OTHER">OTHER</option>
+                        <option value="HR">HR</option>
+                        <option value="FINANCE">FINANCE</option>
+                        <option value="MARKETING">MARKETING</option>
+                        <option value="SALES">SALES</option>
                     </select>
                 </div>
 
