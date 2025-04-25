@@ -3,7 +3,7 @@
 /* Global Styles */
 :root {
   --background: #ffffff; /* Dark background */
-  --foreground: #ffffff; /* White text */
+  --foreground: #000000;
   --font-sans: "Montserrat", Arial, sans-serif; /* Changed font to Montserrat */
 }
 
